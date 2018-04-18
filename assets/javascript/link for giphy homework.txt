@@ -1,0 +1,58 @@
+https://developers.giphy.com/docs/
+
+1oLgnFR0ZIDUMCW2FUUjzuV4DazPFejN
+
+
+Request URL:
+
+https://api.giphy.com/v1/gifs/search?api_key=1oLgnFR0ZIDUMCW2FUUjzuV4DazPFejN&q=cat&limit=10&offset=0&rating=G&lang=en
+
+
+
+
+
+
+Search replicates the search found on GIPHY.
+
+Translate converts words and phrases to GIFs and is designed to be used in messaging apps, e.g. the GIPHY Slack integration.
+
+
+Trending pulls in the best GIFs from around the internet, hand curated by the GIPHY editorial team.
+
+
+Random returns a single random GIF, optionally limited to a specified tag.
+
+
+Stickers are a separate library of animated, transparent GIFs; great for creation apps and iOS10 iMessage apps! You can also view them on the web by visiting giphy.com/stickers.
+
+
+As per our section 5 A of our terms of service, we require all apps that use the GIPHY API to conspicuously display "Powered By GIPHY" attribution marks where the API is utilized. You can find approved official logo marks here. Please provide screenshots of your attribution placement.
+
+
+q: string
+Search query term or phrase.
+
+cheeseburgers
+---------------------------------------------------
+
+rating: string
+Filters results by specified rating.
+
+g
+---------------------------------------------------
+
+
+limit: integer (int32)
+The maximum number of records to return.
+
+
+
+Search Endpoint
+HOST
+api.giphy.com
+PATH
+GET /v1/gifs/search
+DESCRIPTION
+Search all GIPHY GIFs for a word or phrase. Punctuation will be stripped and ignored. Use a plus or url encode for phrases. Example paul+rudd, ryan+gosling or american+psycho.
+
+25	20
