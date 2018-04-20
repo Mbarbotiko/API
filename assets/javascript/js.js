@@ -1,8 +1,34 @@
 $(document).ready(function () {
     var buttons = ['spongebob', 'barney', 'simpsons'];
 
+    console.log(buttons);
+
     //Initial array of strings to search
 
+
+
+    renderBtns();
+    displayGiphys();
+
+    $("#add-giphy").on("click", function (event) {
+        // Preventing the buttons default behavior when clicked (which is submitting a form)
+        event.preventDefault();
+        // This line grabs the input from the textbox
+        var addingGif = $("#giphy-search").val().trim();
+
+        // Adding the gif from the textbox to our array
+        buttons.push(addingGif);
+        console.log(buttons);
+        console.log(addingGif);
+
+        
+        renderBtns();
+        //Running function that creates the button as the user submits their gif search
+        displayGiphys();
+        //running the display function after the button has been created so that the query is called for the search item added to the array.
+
+
+    });
 
     function renderBtns() {
         $('#buttons-here').empty();
@@ -20,7 +46,7 @@ $(document).ready(function () {
 
     }
 
-    renderBtns();
+   
 
     //Calling the function to create buttons.
 
@@ -67,14 +93,15 @@ $(document).ready(function () {
 
                         var cartoonImage = $('<img>');
 
-                        cartoonImage.attr('src', results[i].images.fixed_height_still.url);
+                        cartoonImage.attr({ 'src': results[i].images.fixed_height_still.url });
 
                         cartoonImage.attr({ 'data-animate': results[i].images.fixed_height.url });
 
-                        cartoonImage.attr({ 'data-state': "still" });
 
                         cartoonImage.attr({ 'data-still': results[i].images.fixed_height_still.url });
-                        //something above is goofy review this code.
+
+                        cartoonImage.attr({ 'data-state': "still" });
+
 
 
                         cartoonImage.addClass('gif');
@@ -91,19 +118,20 @@ $(document).ready(function () {
                         //Appending the DIVS created into the HTML
 
                         $(".gif").on('click', function () {
-                            var gifState = $(this).attr('data-state');
+                            var state = $(this).attr("data-state");
                             //Creating a variable to use in if else statement and targeting the class "gif" for the click function.
 
-                            if (gifState === 'still') {
+                            if (state === "still") {
                                 $(this).attr("src", $(this).attr("data-animate"));
                                 $(this).attr("data-state", "animate");
-
                             } else {
                                 $(this).attr("src", $(this).attr("data-still"));
                                 $(this).attr("data-state", "still");
 
-                            }//need to trouble shoot why giphy wont stop when clicked, everyother one does.
+                            }//need to trouble shoot why every other giphy animates and stops upon click.
                         });
+
+                        
 
 
 
@@ -123,7 +151,9 @@ $(document).ready(function () {
 
 
 
-    displayGiphys();
+   
+
+
 
 
 
