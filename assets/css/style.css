@@ -1,12 +1,22 @@
-button{
-    
-    background-color:lightcoral;
-    color:  rgb(59, 56, 56);
-    border:solid black 1px;
+.btn-info{
+
     padding:5px;
     margin:5px;
     width:100px;
     width:auto;
+    
+    
+}
+
+body {
+    font-family: 'Dokdo', cursive;
+    font-size: 100%;
+}
+
+#buttons-here{
+    width:50%;
+    margin-left:5%;
+    margin-top:25px;
 }
 
 nav{
@@ -15,22 +25,56 @@ nav{
 }
 
 img{
-    padding:10px;
-   
-  
+    padding:5px;
+    background-color: teal;
     
-    
+
 }
+
 
 #onegif{
     float: left;
     text-align: center;
+    margin:2px;
 }
 
 #giphyDiv{
     width: 66%;
+   
 }
 
 #rating{
     text-transform: uppercase;
+    border:dotted 2px cyan;
+}
+
+#user-submit{
+    position: absolute;
+    left:65%;
+}
+
+header{
+    background:turquoise;
+    border-bottom:solid 2px rgb(34, 124, 115);
+}
+
+h1{
+    text-align: center;
+    padding-top:50px;
+    padding-bottom:50px;
+
+}
+
+#headerimage{
+    position: absolute;
+    opacity: .5;
+    border:none;
+    background-color:none;
+    padding:none;
+    width:100%;
+    height:auto;
+    margin: auto 0;
+    top:155px;
+    left:0;
+    z-index: -1;
 }

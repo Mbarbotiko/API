@@ -35,13 +35,15 @@ $(document).ready(function () {
         for (var i = 0; i < buttons.length; i++) {
 
             var a = $('<button>');
-            a.addClass('cartoon-btn');
+            a.addClass('btn btn-info');
             a.attr('data-name', buttons[i]);
             a.text(buttons[i]);
             $('#buttons-here').append(a);
         }
 
         //Creating a function that creates the buttons from the information entered into the array "buttons.
+
+        //<button type="button" class="btn btn-info">Info</button>
 
 
     }
