@@ -117,19 +117,6 @@ $(document).ready(function () {
                         $('#giphyDiv').append(smallerDiv);
                         //Appending the DIVS created into the HTML
 
-                        $(".gif").on('click', function () {
-                            var state = $(this).attr("data-state");
-                            //Creating a variable to use in if else statement and targeting the class "gif" for the click function.
-
-                            if (state === "still") {
-                                $(this).attr("src", $(this).attr("data-animate"));
-                                $(this).attr("data-state", "animate");
-                            } else {
-                                $(this).attr("src", $(this).attr("data-still"));
-                                $(this).attr("data-state", "still");
-
-                            }//need to trouble shoot why every other giphy animates and stops upon click.
-                        });
 
                         
 
@@ -141,6 +128,21 @@ $(document).ready(function () {
 
 
                     }
+
+                    
+                    $(".gif").on('click', function () {
+                        var state = $(this).attr("data-state");
+                        //Creating a variable to use in if else statement and targeting the class "gif" for the click function.
+
+                        if (state === "still") {
+                            $(this).attr("src", $(this).attr("data-animate"));
+                            $(this).attr("data-state", "animate");
+                        } else {
+                            $(this).attr("src", $(this).attr("data-still"));
+                            $(this).attr("data-state", "still");
+
+                        }//need to trouble shoot why every other giphy animates and stops upon click.
+                    });
                 });
 
 
