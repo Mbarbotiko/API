@@ -106,7 +106,7 @@ $(document).ready(function () {
 
 
 
-                        cartoonImage.addClass('gif');
+                        cartoonImage.addClass('gif', "card-img-top");
                         //Adding attributes to call later to the images that are called, animate, and still, and gif to target for an onclick later in the function.
 
 
